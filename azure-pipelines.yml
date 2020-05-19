@@ -6,6 +6,8 @@ pool:
 
 variables:
   imageName: 'pipelines-javascript-docker'
+  #Note: Buildkit for docker is not supported on Windows hosts
+  DOCKER_BUILDKIT: 1
 
 steps:
 - task: Docker@2
